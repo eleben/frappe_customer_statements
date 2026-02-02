@@ -363,7 +363,7 @@ a {
                 {% if(row.posting_date) %}
                 <td>{{ frappe.format(row.posting_date, 'Date') }}</td>
                 {% if(row.voucher_type == "Sales Invoice") %}
-                <td>{{ row.voucher_subtype }}</td>
+                <td>{{ row.voucher_subtype or 'Sales Invoice' }}</td>
                 {% else %}
                 <td>{{ row.voucher_type|replace('Payment Entry', 'Payment') }}</td>
                 {% endif %}
