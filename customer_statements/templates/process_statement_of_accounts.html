@@ -272,21 +272,19 @@ a {
     <div class="statement-header">
         <table>
             <tr>
-                <td style="width: 60%;">
+                <td>
                     {% if letter_head.content %}
                         {{ letter_head.content }}
                     {% else %}
                         <strong style="font-size: 14pt;">{{ filters.company }}</strong>
                     {% endif %}
                 </td>
-                <td style="width: 40%;">
+			</tr>
+			<tr>
+                <td>
+					<br />
                     <div class="statement-title">STATEMENT OF ACCOUNT</div>
-                    <div class="statement-subtitle">
-
-                    </div>
-                    <div class="statement-subtitle">
-                        
-                    </div>
+                    <div class="statement-subtitle"></div>
                 </td>
             </tr>
         </table>
