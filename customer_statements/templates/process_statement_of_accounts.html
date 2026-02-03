@@ -196,7 +196,7 @@
 	font-weight: 600;
 }
 
-.aging-table, .future-payments-table {
+.aging-table, .future-payments-table, .terms-table {
 	font-size: 8.5pt;
 	width: 100%;
 	border-collapse: collapse;
@@ -224,6 +224,12 @@
 .terms-info-section {
 }
 
+.terms-section {
+	margin-top: 20px;
+	page-break-inside: avoid;
+	overflow: hidden;
+}
+
 .terms-box {
 	background: #f8fafc;
 	border: 1px solid #e2e8f0;
@@ -246,13 +252,9 @@
 }
 	
 .terms-container {
-	margin-top: 15px;
-	background: #f8fafc;
-	border: 1px solid #e2e8f0;
-	border-radius: 4px;
-	padding: 8px 12px;
-	font-size: 8pt;
-	color: #475569;
+	float: left;
+	width: 80%;
+	padding-right: 10px;
 }
 
 a {
@@ -514,24 +516,22 @@ a {
         </div>
         {% endif %}
     </div>
-
-    <!-- Terms & Conditions -->
-    {% if terms_and_conditions %}
-	<div class="terms-info-section">
-        <table>
-            <tr>
-                <td>
-	 				<div class="terms-container">
-			    	<div class="section-heading">Terms & Conditions</div>
-			            <div class="terms-box-content">
-			   				{{ terms_and_conditions }}
-						</div>
-    				</div>
-				</td>
-			</tr>
-		</table>
-		</
-    {% endif %}
+    
+	<div class="terms-section">
+         <!-- Terms & Conditions -->
+    	{% if terms_and_conditions %}
+        <div class="terms-container">
+            <h4 class="section-heading">Terms & Conditions</h4>
+	        <table class="terms-table">
+	            <tr>
+	                <td>
+				   		{{ terms_and_conditions }}
+					</td>
+				</tr>
+			</table>
+		</div>
+    	{% endif %}
+	</div>
 
     <!-- Footer -->
     {% if letter_head.footer %}
