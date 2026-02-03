@@ -17,7 +17,7 @@
 }
 
 .statement-header {
-	border-bottom: 2px solid #00a0e0;
+	border-bottom: 2px solid #033c93;
 	padding-bottom: 8px;
 	margin-bottom: 10px;
 }
@@ -29,7 +29,7 @@
 .statement-title {
 	font-size: 16pt;
 	font-weight: 700;
-	color: #00a0e0;
+	color: #033c93;
 	text-align: right;
 	letter-spacing: -0.5px;
 	line-height: 1em;
@@ -172,7 +172,7 @@
 	letter-spacing: 0.5px;
 	margin-bottom: 8px;
 	padding-bottom: 4px;
-	border-bottom: 2px solid #00a0e0;
+	border-bottom: 2px solid #033c93;
 }
 
 .summary-table {
@@ -221,6 +221,30 @@
 	vertical-align: top;
 }
 
+.terms-info-section {
+}
+
+.terms-box {
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 4px;
+	padding: 10px 12px;
+}
+
+.terms-box-title {
+	font-size: 7pt;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #64748b;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.terms-box-content {
+	font-size: 9pt;
+	color: #1e293b;
+}
+	
 .terms-container {
 	margin-top: 15px;
 	background: #f8fafc;
@@ -231,12 +255,8 @@
 	color: #475569;
 }
 
-.terms-container strong {
-	color: #1e293b;
-}
-
 a {
-	color: #00a0e0;
+	color: #033c93;
 	text-decoration: none;
 }
 
@@ -497,10 +517,20 @@ a {
 
     <!-- Terms & Conditions -->
     {% if terms_and_conditions %}
-    <div class="terms-container">
-        <strong>Terms & Conditions</strong>
-        <div style="margin-top: 5px;">{{ terms_and_conditions }}</div>
-    </div>
+	<div class="terms-info-section">
+        <table>
+            <tr>
+                <td>
+	 				<div class="terms-container">
+			    	<div class="section-heading">Terms & Conditions</div>
+			            <div class="terms-box-content">
+			   				{{ terms_and_conditions }}
+						</div>
+    				</div>
+				</td>
+			</tr>
+		</table>
+		</
     {% endif %}
 
     <!-- Footer -->
